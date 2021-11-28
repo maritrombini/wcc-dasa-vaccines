@@ -9,7 +9,7 @@ body {
 h1 {
   font-family: 'Great Vibes', cursive;
   font-size: 50px;
-  margin-right: -40px;
+  margin-right: 40px;
   margin-top: 40px;
 }
 
@@ -26,7 +26,7 @@ h1 {
 }
 
 #meredith {
-  margin-left: -70px;
+  margin-left: -105px;
   margin-top: 40px;
   width: 65%;
   height: 500px;
@@ -36,10 +36,11 @@ h1 {
 #tabela-lista {
   font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 80%;
-  width: 80%;
+  width: 50%;
+  width: 50%;
   margin-top: 100px;
-  margin-left: 730px;
+  margin-left: 640px;
+  margin-right: 20px;
   border-radius: 10px;
   display: block;
   height: 400px;
@@ -48,6 +49,7 @@ h1 {
 
 #tabela-lista td,
 #tabela-lista th {
+  text-align: center;
   border: 1px solid #ddd;
   padding: 8px;
   width: 110px;
@@ -64,8 +66,8 @@ h1 {
 #tabela-lista th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
-  background-color: #dcdcdc;
+  text-align: center;
+  background-color: #b0e0e6;
   color: rgb(0, 14, 64);
 }
 

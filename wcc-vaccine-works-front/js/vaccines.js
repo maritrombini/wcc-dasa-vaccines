@@ -20,7 +20,7 @@ listing_table.innerHTML = ''
 function createButtonFavorite(favorite) {
   const buttonFav = document.createElement('button')
   let favoriteIcon = document.createElement('i')
-  favoriteIcon.className = 'fas fa-syringe'
+  favoriteIcon.className = 'far fa-heart'
   buttonFav.innerHTML = favoriteIcon
   document.body.appendChild(buttonFav)
 }
@@ -47,9 +47,9 @@ function preencherDados(lista) {
 
     const buttonFav = document.createElement('button')
     buttonFav.addEventListener('click', function () {
-      fetch(`${URL}/${element.id}/favorite`, {
+      fetch(`${URL}/${element.id}/vaccinated`, {
         method: 'PATCH',
-        body: JSON.stringify({ favorite: !element.favorite }),
+        body: JSON.stringify({ vaccinated: !element.vaccinated }),
         headers: {
           'Content-Type': 'application/json'
         }
@@ -61,9 +61,9 @@ function preencherDados(lista) {
         .catch(erro => console.error(erro))
     })
     let favoriteIcon = document.createElement('i')
-    favoriteIcon.className = element.favorite
+    favoriteIcon.className = element.vaccinated
       ? 'fas fa-syringe'
-      : 'fas fa-syringe'
+      : 'far fa-heart'
     buttonFav.appendChild(favoriteIcon)
     itemDaLinhaFavorite.appendChild(buttonFav)
 
