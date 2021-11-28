@@ -11,7 +11,7 @@ function getVaccines() {
 
 getVaccines()
 //atenção aqui!!!!!!!!!
-function favoriteDocto() {}
+function updateVaccinated() {}
 
 var listing_table = document.getElementById('tabela-lista-corpo')
 
@@ -20,11 +20,10 @@ listing_table.innerHTML = ''
 function createButtonFavorite(favorite) {
   const buttonFav = document.createElement('button')
   let favoriteIcon = document.createElement('i')
-  favoriteIcon.className = 'far fa-star'
+  favoriteIcon.className = 'fas fa-syringe'
   buttonFav.innerHTML = favoriteIcon
   document.body.appendChild(buttonFav)
 }
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 function preencherDados(lista) {
   lista.forEach((element, index) => {
@@ -33,10 +32,16 @@ function preencherDados(lista) {
     itemDaLinhaId.innerText = element.id
     let itemDaLinhaNome = document.createElement('td')
     itemDaLinhaNome.innerText = element.name
+    let itemDaLinhaExpectedDate = document.createElement('td')
+    itemDaLinhaExpectedDate.innerHTML = element.expected_date
     let itemDaLinhaCrm = document.createElement('td')
-    itemDaLinhaCrm.innerHTML = element.expected_date
+    itemDaLinhaCrm.innerHTML = element.crm
     let itemDaLinhaSpeciality = document.createElement('td')
-    itemDaLinhaSpeciality.innerHTML = element.vaccinated
+    itemDaLinhaSpeciality.innerHTML = element.specialty
+    let itemDaLinhaClinc = document.createElement('td')
+    itemDaLinhaClinc.innerHTML = element.clinic
+    let itemDaLinhaPhone = document.createElement('td')
+    itemDaLinhaPhone.innerHTML = element.phone
     let itemDaLinhaFavorite = document.createElement('td')
     let itemDaLinhaDelete = document.createElement('td')
 
@@ -56,7 +61,9 @@ function preencherDados(lista) {
         .catch(erro => console.error(erro))
     })
     let favoriteIcon = document.createElement('i')
-    favoriteIcon.className = element.favorite ? 'fas fa-star' : 'far fa-star'
+    favoriteIcon.className = element.favorite
+      ? 'fas fa-syringe'
+      : 'fas fa-syringe'
     buttonFav.appendChild(favoriteIcon)
     itemDaLinhaFavorite.appendChild(buttonFav)
 
@@ -80,8 +87,7 @@ function preencherDados(lista) {
 
     linha.appendChild(itemDaLinhaId)
     linha.appendChild(itemDaLinhaNome)
-    linha.appendChild(itemDaLinhaVaccinated)
-    linha.appendChild(itemDaLinhaexpected_date)
+    linha.appendChild(itemDaLinhaExpectedDate)
     linha.appendChild(itemDaLinhaFavorite)
     linha.appendChild(itemDaLinhaDelete)
     listing_table.appendChild(linha)
