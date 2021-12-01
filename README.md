@@ -4,7 +4,7 @@ API para controle de vacinas com o objetivo de ficar com a sua vacinação sempr
 
 ---
 
-<img src="api-vaccines.png" min-width="" max-width="250px"  width="250px" alt="Front-end da API">
+<img src="api-vaccines.png" min-width="" max-width="950px"  width="950px" alt="Front-end da API">
 
 ---
 
