@@ -9,7 +9,7 @@ body {
 h1 {
   font-family: 'Great Vibes', cursive;
   font-size: 50px;
-  margin-right: 40px;
+  margin-right: 220px;
   margin-top: 40px;
 }
 
@@ -36,8 +36,8 @@ h1 {
 #tabela-lista {
   font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 50%;
-  width: 50%;
+  width: 60%;
+  width: 60%;
   margin-top: 100px;
   margin-left: 640px;
   margin-right: 20px;
@@ -67,7 +67,7 @@ h1 {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #b0e0e6;
+  background-color: rgb(221, 217, 217);
   color: rgb(0, 14, 64);
 }
 

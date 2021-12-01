@@ -34,14 +34,8 @@ function preencherDados(lista) {
     itemDaLinhaNome.innerText = element.name
     let itemDaLinhaExpectedDate = document.createElement('td')
     itemDaLinhaExpectedDate.innerHTML = element.expected_date
-    let itemDaLinhaCrm = document.createElement('td')
-    itemDaLinhaCrm.innerHTML = element.crm
-    let itemDaLinhaSpeciality = document.createElement('td')
-    itemDaLinhaSpeciality.innerHTML = element.specialty
-    let itemDaLinhaClinc = document.createElement('td')
-    itemDaLinhaClinc.innerHTML = element.clinic
-    let itemDaLinhaPhone = document.createElement('td')
-    itemDaLinhaPhone.innerHTML = element.phone
+    let itemDaLinhaManufacturer = document.createElement('td')
+    itemDaLinhaManufacturer.innerHTML = element.manufacturer
     let itemDaLinhaFavorite = document.createElement('td')
     let itemDaLinhaDelete = document.createElement('td')
 
@@ -88,6 +82,7 @@ function preencherDados(lista) {
     linha.appendChild(itemDaLinhaId)
     linha.appendChild(itemDaLinhaNome)
     linha.appendChild(itemDaLinhaExpectedDate)
+    linha.appendChild(itemDaLinhaManufacturer)
     linha.appendChild(itemDaLinhaFavorite)
     linha.appendChild(itemDaLinhaDelete)
     listing_table.appendChild(linha)

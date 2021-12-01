@@ -14,6 +14,9 @@ const Vaccine = database.define('Vaccine', {
   expected_date: {
     type: DataTypes.STRING
   },
+  manufacturer: {
+    type: DataTypes.STRING
+  },
   vaccinated: {
     type: DataTypes.BOOLEAN
   }
