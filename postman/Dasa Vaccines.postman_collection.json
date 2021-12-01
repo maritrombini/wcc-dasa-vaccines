@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "efaea156-0e6b-4a80-873e-6487fd1e02e8",
+		"name": "Dasa Vaccines",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createVaccine",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Covid19 - Dose 1\",\r\n    \"expected_date\" : \"18/07/2021\",\r\n    \"manufacturer\" : \"CoronaVac\",\r\n    \"vaccinated\": true\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/vaccines",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"vaccines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getVaccines",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/vaccines",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"vaccines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getVaccineById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/vaccines/7",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"vaccines",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateVaccine",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"name\": \"Covid19 - Dose 1\",\r\n      \"expected_date\": \"15/08/2021\",\r\n      \"manufacturer\": \"CoronaVac\",\r\n      \"vaccinated\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/vaccines/8",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"vaccines",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateVaccinated",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"vaccinated\": \"true\"\r\n       \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/vaccines/7/vaccinated",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"vaccines",
+						"7",
+						"vaccinated"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteVaccines",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/vaccines/17",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"vaccines",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getByManufacturer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/vaccines/manufacturer/Astrazeneca",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"vaccines",
+						"manufacturer",
+						"Astrazeneca"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://dasa-vaccines.herokuapp.com"
+		}
+	]
+}
